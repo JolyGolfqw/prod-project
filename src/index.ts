@@ -4,3 +4,6 @@ function sayName(name: string): string {
 }
 
 sayName('EEEEEe')
+
+const doc = document.getElementById('root')
+doc.textContent = "EEEE"
