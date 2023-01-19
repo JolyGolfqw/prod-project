@@ -1,0 +1,1 @@
+console.log("EEEEEe"),document.getElementById("root").textContent="EEEE";
