@@ -1,0 +1,23 @@
+@import "reset";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
+
+.app {
+  font: var(--font-m);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+
+  // color: white;
+
+  min-height: 100vh;
+}
+
+.page-content {
+  display: flex;
+}
+
+.page-wrapper {
+  padding: 20px;
+  flex-grow: 1;
+}
