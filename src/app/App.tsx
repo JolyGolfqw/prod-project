@@ -6,22 +6,18 @@ import { classNames } from "../shared/lib/classNames/classNames";
 import useTheme from "app/providers/ThemeProvider/lib/useTheme";
 import { MainPage } from "pages/MainPage";
 import { AboutPage } from "pages/AboutPage";
+import { AppRouter } from "./providers/router";
 
 export default function App() {
-    const {theme, onToggle} = useTheme()
+  const { theme, onToggle } = useTheme();
   return (
-    <div className={classNames('app', {hover: true}, [theme])}>
-        <button onClick={onToggle}>Toggle</button>
+    <div className={classNames("app", { hover: true }, [theme])}>
+      <button onClick={onToggle}>Toggle</button>
       <div>
         <Link to="/">Main</Link>
         <Link to="/about">About</Link>
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 }
