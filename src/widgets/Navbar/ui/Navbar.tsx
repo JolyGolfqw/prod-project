@@ -3,7 +3,7 @@ import styles from './Navbar.module.scss';
 
 import type { PropsWithChildren } from 'react';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 interface NavbarProps {
  className?: string;

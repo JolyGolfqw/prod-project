@@ -14,13 +14,15 @@ export default function App() {
   const { theme } = useTheme();
   return (
     <div className={classNames("app", { hover: true }, [theme])}>
-      <div>
-        <Navbar />
-      </div>
-      <div className="page-content">
-        <Sidebar />
-        <AppRouter />
-      </div>
+      <Suspense fallback="">
+        <div>
+          <Navbar />
+        </div>
+        <div className="page-content">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 }
