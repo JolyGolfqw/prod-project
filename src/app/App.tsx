@@ -8,6 +8,7 @@ import { MainPage } from "pages/MainPage";
 import { AboutPage } from "pages/AboutPage";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
+import { Sidebar } from "widgets/Sidebar";
 
 export default function App() {
   const { theme } = useTheme();
@@ -16,7 +17,10 @@ export default function App() {
       <div>
         <Navbar />
       </div>
-      <AppRouter />
+      <div className="page-content">
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   );
 }
