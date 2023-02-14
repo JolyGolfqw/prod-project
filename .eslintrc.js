@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript'],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', "plugin:i18next/recommended"],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -14,7 +14,7 @@ module.exports = {
       jsx: true
     }
   },
-  plugins: ['react'],
+  plugins: ['react', "i18next"],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -44,6 +44,10 @@ module.exports = {
     "semi": ["error", "always"],
     "@typescript-eslint/semi": "off",
     "@typescript-eslint/quotes": "off",
+    "i18next/no-literal-string": [
+      "error",
+      { markupOnly: true},
+    ]
   },
   globals: {
     _IS_DEV_: true,
