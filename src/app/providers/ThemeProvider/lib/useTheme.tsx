@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext";
+import { useContext } from 'react';
+import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './ThemeContext';
 
 interface UseThemeResult {
-  theme: Theme;
-  onToggle: () => void;
+  theme: Theme
+  onToggle: () => void
 }
 
-export default function useTheme(): UseThemeResult {
+export default function useTheme (): UseThemeResult {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const onToggle = () => {
@@ -17,6 +17,6 @@ export default function useTheme(): UseThemeResult {
 
   return {
     theme,
-    onToggle,
+    onToggle
   };
 }

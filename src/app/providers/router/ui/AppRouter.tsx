@@ -1,9 +1,9 @@
 
-import React, { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import { routeConfig } from "shared/config/routeConfig/routeConfig";
+import React, { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 
-export default function AppRouter() {
+export default function AppRouter () {
   console.log(routeConfig);
   console.log(Object.values(routeConfig));
   return (
