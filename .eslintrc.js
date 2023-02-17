@@ -42,6 +42,7 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'warn',
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
     "semi": ["error", "always"],
     "@typescript-eslint/semi": "off",
     "@typescript-eslint/quotes": "off",
