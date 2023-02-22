@@ -42,7 +42,13 @@
     }
   },
 
-  // "include": [
-  //   "./config/jest/setupTests.ts"
-  // ],
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "webpack.config.ts",
+    "./config/jest/jest.config.ts",
+    "./config/jest/fileMock.tsx"
+
+  ],
 }

@@ -4,13 +4,15 @@ module.exports = {
     es2021: true,
     jest: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript', "plugin:i18next/recommended"],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./tsconfig.json'],
+    project: './tsconfig.json',
+    parser: '@typescript-eslint/parser',
     tsconfigRootDir: __dirname,
+    extraFileExtensions: [".json"],
     ecmaFeatures: {
       jsx: true
     }
@@ -20,10 +22,9 @@ module.exports = {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
     indent: [2, 2],
-    'react/jsx-filename-extension': [
-      2,
-      { extensions: ['.js', '.jsx', '.tsx'] }
-    ],
+    'react/jsx-filename-extension': [2, {
+      extensions: ['.js', '.jsx', '.tsx']
+    }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
@@ -46,12 +47,13 @@ module.exports = {
     "semi": ["error", "always"],
     "@typescript-eslint/semi": "off",
     "@typescript-eslint/quotes": "off",
-    "i18next/no-literal-string": [
-      "error",
-      { markupOnly: true},
-    ]
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "react/display-name": "off",
+    "i18next/no-literal-string": ["error", {
+      markupOnly: true
+    }]
   },
   globals: {
-    _IS_DEV_: true,
+    _IS_DEV_: true
   }
-}
+};

@@ -4,7 +4,8 @@ import styles from './Button.module.scss';
 import type { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react';
 
 export enum ButtonTheme {
-  CLEAR = 'clear'
+  CLEAR = 'clear',
+  OUTLINE = 'outline'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
