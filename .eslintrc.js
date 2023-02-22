@@ -49,6 +49,7 @@ module.exports = {
     "@typescript-eslint/quotes": "off",
     "@typescript-eslint/consistent-type-assertions": "off",
     "react/display-name": "off",
+    "react/jsx-props-no-spreading": "off",
     "i18next/no-literal-string": ["error", {
       markupOnly: true
     }]

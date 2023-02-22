@@ -11,8 +11,9 @@ export default {
   }
 } as ComponentMeta<typeof MainPage>;
 
-const Template: ComponentStory<typeof MainPage> = (args) => (
-  <MainPage {...args as {}} />
+const Template: ComponentStory<typeof MainPage> = (args: Record<string, unknown>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <MainPage {...args} />
 );
 
 export const Light = Template.bind({});
