@@ -14,10 +14,7 @@ export const Navbar = (props: PropsWithChildren<NavbarProps>) => {
 
   return (
     <div className={classNames(styles.Navbar, {}, [className])}>
-      <div className={styles.links}>
-        <AppLink theme={AppLinkTheme.SECONDARY} to='/' className={styles.mainLink}>{t("Главная")}</AppLink>
-        <AppLink theme={AppLinkTheme.SECONDARY} to='/about'>{t('О нас')}</AppLink>
-      </div>
+      <div className={styles.links}>/</div>
     </div>
   );
 };
